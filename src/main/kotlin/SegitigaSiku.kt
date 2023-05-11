@@ -1,3 +1,5 @@
+import kotlin.math.sqrt
+
 class SegitigaSiku : BangunDatar {
     override fun luas(s1: Double?, s2: Double?): Double {
         return if (s1 == null || s2 == null) {
@@ -11,7 +13,7 @@ class SegitigaSiku : BangunDatar {
         return if (s1 == null || s2 == null) {
             0.0
         } else {
-            (s1 + s2 + Math.sqrt((s1 * s1) + (s2 * s2)))
+            (s1 + s2 + sqrt((s1 * s1) + (s2 * s2)))
         }
     }
 
