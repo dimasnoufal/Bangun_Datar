@@ -2,6 +2,28 @@ import sun.applet.Main
 
 class MainMenu {
     fun MainMenu(pilihan: String?) {
+
+        do {
+
+            println("====================")
+            println("Hitung Luas dan Keliling Bangun Datar :")
+            println("1. Persegi Panjang")
+            println("2. Segitiga Siku")
+            println("3. Lingkaran")
+            println("Masukan Menu : ")
+
+            var pilihan_ = pilihan
+            pilihan_ = readlnOrNull()
+
+            if (pilihan_!!.toInt() > 1) {
+                Memilih(pilihan_)
+            }
+        } while (pilihan_!!.toInt() < 1)
+
+
+    }
+
+    fun Memilih(pilihan_: String?) {
         var s1: Double?
         var s2: Double?
         val r: Double?
@@ -12,7 +34,7 @@ class MainMenu {
         val segitigaSiku = SegitigaSiku()
         val lingkaran = Lingkaran()
 
-        when (pilihan) {
+        when (pilihan_) {
             "1" -> {
                 print("Masukan panjang persegi Panjang: ")
                 inputS1 = readlnOrNull()
@@ -65,5 +87,6 @@ class MainMenu {
 
             else -> println("Tidak ada pilihan")
         }
+
     }
 }
