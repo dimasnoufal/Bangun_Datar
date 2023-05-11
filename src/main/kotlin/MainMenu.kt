@@ -2,22 +2,23 @@ class MainMenu {
     fun MainMenu(pilihan: String?) {
 
         do {
-
-            println("====================")
-            println("Hitung Luas dan Keliling Bangun Datar :")
-            println("1. Persegi Panjang")
-            println("2. Segitiga Siku")
-            println("3. Lingkaran")
-            println("Masukan Menu : ")
-
             var pilihan_ = pilihan
-            pilihan_ = readlnOrNull()
-
-            if (pilihan_!!.toInt() > 1) {
+            if (pilihan_!!.toInt() > 0) {
                 Memilih(pilihan_)
+            } else {
+                println("====================")
+                println("Hitung Luas dan Keliling Bangun Datar :")
+                println("1. Persegi Panjang")
+                println("2. Segitiga Siku")
+                println("3. Lingkaran")
+                println("Masukan Menu : ")
+                pilihan_ = readlnOrNull()
+
+                if (pilihan_!!.toInt() > 0) {
+                    Memilih(pilihan_)
+                }
             }
         } while (pilihan_!!.toInt() < 1)
-
 
     }
 
