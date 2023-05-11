@@ -1,5 +1,3 @@
-import sun.applet.Main
-
 class MainMenu {
     fun MainMenu(pilihan: String?) {
 
@@ -24,8 +22,8 @@ class MainMenu {
     }
 
     fun Memilih(pilihan_: String?) {
-        var s1: Double?
-        var s2: Double?
+        val s1: Double?
+        val s2: Double?
         val r: Double?
         val inputS1: String?
         val inputS2: String?
